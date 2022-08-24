@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def add(a, b):
-    return a + b
+for i in range(ord("a"), ord("z") + 1):
+    print("{}".format(chr(i)), end="")
