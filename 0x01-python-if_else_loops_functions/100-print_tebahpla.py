@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-for char in range(26):
-    print("{}".format(chr(ord("z") - char) if char % 2 == 0
-        else chr(ord("z") - 32 - char)), end=""i)
+for ch in reversed(range(97, 123)):
+    print("{:c}".format(ch if (ch % 2 == 0) else (ch - 32)), end='')
