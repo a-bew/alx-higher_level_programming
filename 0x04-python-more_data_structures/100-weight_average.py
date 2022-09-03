@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-
-def multiplyList(myList) :
-    # Multiply elements one by one
-    result = 1
-    for x in myList:
-         result = result * x
-    return result
-
 def weight_average(my_list=[]):
-    return sum(list(map(lambda x:multiplyList(x), my_list)))/sum(list( map(lambda y:y[1], my_list) ))
+    if not my_list:
+        return 0
+
+    num = 0
+    den = 0
+
+    for tup in my_list:
+        num += tup[0] * tup[1]
+        den += tup[1]
+
+    return (num / den)
