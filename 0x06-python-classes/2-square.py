@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
 This module defines a Square class
+
+Its implements value and type checks for its attributes
 """
 
 
 class Square():
-    """This class is a Size validation for Square
+    """Square implementation
     """
     def __init__(self, size=0):
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
