@@ -10,8 +10,8 @@ class Square():
     """Square implementation
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         return (self.__size ** 2)
