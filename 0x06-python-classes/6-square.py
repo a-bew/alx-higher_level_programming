@@ -6,14 +6,17 @@ Create a Class Square with:
 - getters & setters.
 """
 
+
 class Square():
     """Square implementation
     """
     def __init__(self, size=0, position=(0, 0)):
+        """Constructor of a Square with the size and position"""
         self.__size = size
         self.__position = position
 
     def area(self):
+        """Method to get the area of the Square"""
         return (self.__size ** 2)
 
     @property
