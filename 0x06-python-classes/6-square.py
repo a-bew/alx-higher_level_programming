@@ -10,19 +10,8 @@ class Square():
     """Square implementation
     """
     def __init__(self, size=0, position=(0, 0)):
-        if type(size) is not int:
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-
-        if type(position) != tuple or \
-            len(position) != 2 or \
-            not all(isinstance(el, int) for el in position) or \
-                not all(el >= 0 for el in position):
-            raise TypeError('position must be a tuple of 2 positive integers')
-
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         return (self.__size ** 2)
