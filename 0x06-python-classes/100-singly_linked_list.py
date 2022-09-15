@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Module 6-square
-class Node that defines a node of a singly linked list;
+Module 100-singly_linked_list
+Defines class Node (with private data and next_node)
+Defines class SinglyLinkedList (with private head and public sorted_insert)
 """
 
 
@@ -9,9 +10,10 @@ class Node:
     """
     class Node definition
     Args:
-        data (int): data of a node
+        data (int): private
+        next_node : private; can be None or Node object
     Functions:
-        __init__(self, data, next_node)
+        __init__(self, data, next_node=None)
         data(self)
         data(self, value)
         next_node(self)
@@ -20,13 +22,13 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """
-        Initializes square
+        Initializes node
         Attributes:
-            size (int): defaults to 0 if none; don't use __size to call setter
-            position (int): tuple of two positive integers
+            data (int): private
+            next_node : private; can be None or Node object
         """
         self.data = data
-        next_node = next_node
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -45,7 +47,8 @@ class Node:
         """
         if type(value) is not int:
             raise TypeError("data must be an integer")
-        self.__data = value
+        else:
+            self.__data = value
 
     @property
     def next_node(self):
@@ -60,11 +63,12 @@ class Node:
         """
         Setter
         Args:
-            value: sets next_node to value if Node
+            value: sets next_node if value is next_node or None
         """
-        if type(value) is not Node:
+        if type(value) is not Node and value is not None:
             raise TypeError("next_node must be a Node object")
-        self.__next_node = value
+        else:
+            self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -76,13 +80,14 @@ class SinglyLinkedList:
         __init__(self)
         sorted_insert(self, value)
     """
+
     def __init__(self):
         """
         Initializes singly linked list
         Attributes:
             head: private
         """
-        self.__head = Node
+        self.__head = None
 
     def __str__(self):
         """
