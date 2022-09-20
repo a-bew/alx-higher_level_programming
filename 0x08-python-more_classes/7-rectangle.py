@@ -56,7 +56,6 @@ class Rectangle:
         Detect instance deletion
         """
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
