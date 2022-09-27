@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 """
-This program validate if the obj is the same with other class
+This program validate the kind of class of an object
 """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
-    This function validate if obj is the same class of a_clas
-    Args:
-      - obj
-      - a_class
+    Returns True if the object is an instance of,
+    or if the object is an instance of a class that inherited from,
+    the specified class; otherwise False.
     """
     return isinstance(obj, a_class)
