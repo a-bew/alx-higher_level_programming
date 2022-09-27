@@ -12,5 +12,4 @@ class MyList(list):
         Sort
         Return: self
         """
-        super().sort()
-        print(self)
+        print(sorted(self))
