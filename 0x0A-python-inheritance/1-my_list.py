@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """
-This module defines a MyList Object.
+This module implements a custom list object
 """
 
+
 class MyList(list):
-    """
-    MyList class skeleton
+    """Custom List
     """
     def print_sorted(self):
-        """"
-        Sort
-        Return: self
+        """
+        prints the list, but sorted (ascending sort)
         """
         print(sorted(self))
